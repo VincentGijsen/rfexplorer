@@ -11,4 +11,7 @@ Initially located on google servers, we migrated into Github when google decided
 
 Ive made some very modest changes to make this great software work with an arduino and CC2500. If you feel this software is for you, please considder buying a true RFExplorer device, this mearly some attempt to mimic the bare basics, without any calibration, or proper verification of the sampled signals!
 
+see: https://github.com/VincentGijsen/RFExplorerArduino
+
+
 don't expect acurate results, when using this modified version, with the arduino code, somewhere within my github account,  BUY THE REAL STUFF
