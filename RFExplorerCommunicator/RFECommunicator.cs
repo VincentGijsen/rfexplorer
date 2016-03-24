@@ -122,7 +122,7 @@ namespace RFExplorerCommunicator
             MODEL_WSUB3G,   //5
             MODEL_6G,       //6
 
-            MODEL_RFGEN=60, //60
+            MODEL_RFGEN = 60, //60
             MODEL_NONE = 0xFF //0xFF
         };
 
@@ -130,21 +130,21 @@ namespace RFExplorerCommunicator
         static string[] arrModels = null;
         private void InitializeModels()
         {
-            arrModels=new string[256];
-            for (int nInd = 0; nInd < arrModels.Length; nInd++ )
+            arrModels = new string[256];
+            for (int nInd = 0; nInd < arrModels.Length; nInd++)
             {
                 arrModels[nInd] = "UNKWN";
             }
 
             arrModels[(int)eModel.MODEL_433] = "433M";
-            arrModels[(int)eModel.MODEL_868]="868M";
-            arrModels[(int)eModel.MODEL_915]="915M";
-            arrModels[(int)eModel.MODEL_WSUB1G]="WSUB1G";
-            arrModels[(int)eModel.MODEL_2400]="2.4G";
-            arrModels[(int)eModel.MODEL_WSUB3G]="WSUB3G";
-            arrModels[(int)eModel.MODEL_6G]="6G";
-            arrModels[(int)eModel.MODEL_RFGEN]="RFE6GEN";
-            arrModels[(int)eModel.MODEL_NONE]="NONE";
+            arrModels[(int)eModel.MODEL_868] = "868M";
+            arrModels[(int)eModel.MODEL_915] = "915M";
+            arrModels[(int)eModel.MODEL_WSUB1G] = "WSUB1G";
+            arrModels[(int)eModel.MODEL_2400] = "2.4G";
+            arrModels[(int)eModel.MODEL_WSUB3G] = "WSUB3G";
+            arrModels[(int)eModel.MODEL_6G] = "6G";
+            arrModels[(int)eModel.MODEL_RFGEN] = "RFE6GEN";
+            arrModels[(int)eModel.MODEL_NONE] = "NONE";
         }
 
         /// <summary>
@@ -213,27 +213,27 @@ namespace RFExplorerCommunicator
         //actual -30dBm adjusted values read from signal generator
         double[] m_arrSignalGeneratorEmbeddedCalibrationActual30DBM = null;
         //note this is shared with RFEGenTest
-        UInt32[] m_arrSignalGeneratorCalRanges_KHZ = { 
+        UInt32[] m_arrSignalGeneratorCalRanges_KHZ = {
                     25000, 33000, 41000, 49000, 57000, 65000, 73000, 81000,
                     89000, 97000, 100000, 116000, 132000, 148000, 164000, 180000,
                     196000, 212000, 228000, 244000, 260000, 276000, 292000, 308000,
                     324000, 340000, 356000, 372000, 388000, 404000, 420000, 436000,
                     452000, 468000, 484000, 500000, 532000, 564000, 596000,
                     628000, 660000, 692000, 724000, 756000, 788000, 820000, 852000,
-                    884000, 916000, 948000, 980000, 1012000, 1044000, 1076000, 1108000, 
-                    1140000, 1172000, 1204000, 1236000, 1268000, 1300000, 1332000, 1364000, 
-                    1396000, 1428000, 1460000, 1492000, 1524000, 1556000, 1588000, 1620000, 
-                    1652000, 1684000, 1716000, 1748000, 1780000, 1812000, 1844000, 1876000, 
-                    1908000, 1940000, 1972000, 2004000, 2036000, 2068000, 2100000, 2132000, 
-                    2164000, 2196000, 2228000, 2260000, 2292000, 2324000, 2356000, 2388000, 
-                    2420000, 2452000, 2484000, 2516000, 2548000, 2580000, 2612000, 2644000, 
-                    2676000, 2708000, 2740000, 2772000, 2804000, 2836000, 2868000, 2900000, 
-                    2932000, 2964000, 2996000, 3000000, 3064000, 3128000, 3192000, 3256000, 
-                    3320000, 3384000, 3448000, 3512000, 3576000, 3640000, 3704000, 3768000, 
-                    3832000, 3896000, 3960000, 4024000, 4088000, 4152000, 4216000, 4280000, 
-                    4344000, 4408000, 4472000, 4536000, 4600000, 4664000, 4728000, 4792000, 
-                    4856000, 4920000, 4984000, 5048000, 5112000, 5176000, 5240000, 5304000, 
-                    5368000, 5432000, 5496000, 5560000, 5624000, 5688000, 5752000, 5816000, 
+                    884000, 916000, 948000, 980000, 1012000, 1044000, 1076000, 1108000,
+                    1140000, 1172000, 1204000, 1236000, 1268000, 1300000, 1332000, 1364000,
+                    1396000, 1428000, 1460000, 1492000, 1524000, 1556000, 1588000, 1620000,
+                    1652000, 1684000, 1716000, 1748000, 1780000, 1812000, 1844000, 1876000,
+                    1908000, 1940000, 1972000, 2004000, 2036000, 2068000, 2100000, 2132000,
+                    2164000, 2196000, 2228000, 2260000, 2292000, 2324000, 2356000, 2388000,
+                    2420000, 2452000, 2484000, 2516000, 2548000, 2580000, 2612000, 2644000,
+                    2676000, 2708000, 2740000, 2772000, 2804000, 2836000, 2868000, 2900000,
+                    2932000, 2964000, 2996000, 3000000, 3064000, 3128000, 3192000, 3256000,
+                    3320000, 3384000, 3448000, 3512000, 3576000, 3640000, 3704000, 3768000,
+                    3832000, 3896000, 3960000, 4024000, 4088000, 4152000, 4216000, 4280000,
+                    4344000, 4408000, 4472000, 4536000, 4600000, 4664000, 4728000, 4792000,
+                    4856000, 4920000, 4984000, 5048000, 5112000, 5176000, 5240000, 5304000,
+                    5368000, 5432000, 5496000, 5560000, 5624000, 5688000, 5752000, 5816000,
                     5880000, 5944000 };
 
         /// <summary>
@@ -243,13 +243,13 @@ namespace RFExplorerCommunicator
         /// <param name="dFrequencyMHZ"></param>
         public double GetSignalGeneratorEstimatedAmplitude(double dFrequencyMHZ)
         {
-            double dValueDBM=0;
+            double dValueDBM = 0;
             double dValue30DBM = -30;
 
             if (m_arrSignalGeneratorEmbeddedCalibrationActual30DBM != null)
             {
                 //search by brute force, if this is considered too slow, can be replace by binary search or something else such a hash
-                for (int nInd = m_arrSignalGeneratorCalRanges_KHZ.Length-1; nInd > 0; nInd--)
+                for (int nInd = m_arrSignalGeneratorCalRanges_KHZ.Length - 1; nInd > 0; nInd--)
                 {
                     double dStartFreqMHZ = m_arrSignalGeneratorCalRanges_KHZ[nInd] / 1000.0;
                     if (dStartFreqMHZ < dFrequencyMHZ)
@@ -284,7 +284,7 @@ namespace RFExplorerCommunicator
             return dValueDBM;
         }
 
-        string m_sSerialNumber="";
+        string m_sSerialNumber = "";
         public string SerialNumber
         {
             get
@@ -301,6 +301,7 @@ namespace RFExplorerCommunicator
 
         //if available, points to a RF Explorer Signal Generator to be used for tracking. It is only meaningful and used when the current object is a spectrum analyzer
         private RFECommunicator m_objRFEGen;
+
         /// <summary>
         /// Connected tracking generator linked to the current spectrum analyzer object.
         /// </summary>
@@ -416,7 +417,7 @@ namespace RFExplorerCommunicator
         }
 
         //The model active, regardless being main or expansion board
-        eModel m_eActiveModel=eModel.MODEL_NONE;
+        eModel m_eActiveModel = eModel.MODEL_NONE;
         public eModel ActiveModel
         {
             get { return m_eActiveModel; }
@@ -432,12 +433,12 @@ namespace RFExplorerCommunicator
         string m_sRFExplorerFirmware;       //Detected firmware
         public string RFExplorerFirmwareDetected
         {
-            get 
+            get
             {
                 if (String.IsNullOrEmpty(m_sRFExplorerFirmware))
                     return "N/A";
                 else
-                    return m_sRFExplorerFirmware; 
+                    return m_sRFExplorerFirmware;
             }
         }
         public bool IsFirmwareSameOrNewer(double fVersionWanted)
@@ -457,7 +458,7 @@ namespace RFExplorerCommunicator
         /// </summary>
         public string FullModelText
         {
-            get 
+            get
             {
                 string sModelText = _DISCONNECTED;
                 if (PortConnected || (SweepData.Count > 0))
@@ -479,7 +480,7 @@ namespace RFExplorerCommunicator
                     " - Model:" + sModel + sExpansion +
                     " - Active range:" + m_fMinFreqMHZ.ToString() + "-" + m_fMaxFreqMHZ.ToString() + "MHz";
                 }
-                return sModelText; 
+                return sModelText;
             }
         }
 
@@ -512,12 +513,12 @@ namespace RFExplorerCommunicator
                     {
                         sConfiguration = "CW: " + m_fRFGenCWFrequencyMHZ.ToString("f3") + "MHz - Start:" + m_fRFGenStartFrequencyMHZ.ToString("f3") + "MHz - Stop:" +
                             m_fRFGenStopFrequencyMHZ.ToString("f3") + "MHz - Step:" + m_fRFGenStepFrequencyMHZ.ToString("f3") + "MHz - PowerLevel:" +
-                            m_nRFGenPowerLevel.ToString("D3") + " - HighPowerSwitch:" + m_bRFGenHighPowerSwitch.ToString() + " - SweepSteps:" + 
+                            m_nRFGenPowerLevel.ToString("D3") + " - HighPowerSwitch:" + m_bRFGenHighPowerSwitch.ToString() + " - SweepSteps:" +
                             m_nRFGenSweepSteps.ToString("D4") + " - StepWait:" + m_nRFGenStepWaitMS.ToString("D5") + "ms";
                     }
                 }
-                
-                return sConfiguration; 
+
+                return sConfiguration;
             }
         }
 
@@ -537,7 +538,7 @@ namespace RFExplorerCommunicator
             MODE_TRACKING = 5,
             MODE_NONE = 0xFF
         };
-        eMode m_eMode=eMode.MODE_SPECTRUM_ANALYZER;
+        eMode m_eMode = eMode.MODE_SPECTRUM_ANALYZER;
         public eMode Mode
         {
             get { return m_eMode; }
@@ -606,6 +607,7 @@ namespace RFExplorerCommunicator
             set { m_fAmplitudeTopDBM = value + m_fOffset_dB; }
         }
         double m_fAmplitudeBottomDBM = MIN_AMPLITUDE_DBM;   //dBm for bottom graph limit
+
         /// <summary>
         /// This is the lowest value that should be selected for display, includes Offset dBm
         /// </summary>
@@ -614,6 +616,7 @@ namespace RFExplorerCommunicator
             get { return m_fAmplitudeBottomDBM; }
             set { m_fAmplitudeBottomDBM = value; }
         }
+
         /// <summary>
         /// AmplitudeBottom property includes the offset dBm, the normalized one does not
         /// </summary>
@@ -649,7 +652,7 @@ namespace RFExplorerCommunicator
         {
             get { return m_fRBWKHZ; }
         }
-        
+
         float m_fOffset_dB = 0.0f;         //Manual offset of the amplitude reading
         public float AmplitudeOffsetDB
         {
@@ -676,7 +679,7 @@ namespace RFExplorerCommunicator
         {
             get { return m_bPortConnected; }
         }
-
+        
         /// <summary>
         /// The main data collection for all Tracking mode acumulated data (except normalized response)
         /// </summary>
@@ -879,6 +882,7 @@ namespace RFExplorerCommunicator
         }
 
         bool m_bDisposed = false;
+
         /// <summary>
         /// Local dispose method
         /// </summary>
@@ -973,7 +977,7 @@ namespace RFExplorerCommunicator
         {
             return (sFilename.EndsWith(sFileExtension, StringComparison.CurrentCultureIgnoreCase));
         }
-
+    
         /// <summary>
         /// Calculates the END or STOP frequency of the span, based on Start / Step values.
         /// </summary>
@@ -1089,13 +1093,13 @@ namespace RFExplorerCommunicator
                                 RFEConfiguration objNewConfiguration = null;
                                 if ((sNewLine.Length > 2) && (sNewLine.Substring(0, 3) == "#K1"))
                                 {
-                                    if (m_bThreadTrackingEnabled==false)
+                                    if (m_bThreadTrackingEnabled == false)
                                     {
                                         //if we are starting tracking here, send the request for first step right away
                                         m_objRFEGen.SendCommand_TrackingStep(0);
-                                        SendCommand_TrackingStep(0); 
+                                        SendCommand_TrackingStep(0);
                                     }
-                                    m_bThreadTrackingEnabled=true;
+                                    m_bThreadTrackingEnabled = true;
                                     nTrackingStepRetry = 0;
 
                                     Monitor.Enter(m_arrReceivedData);
@@ -1112,7 +1116,7 @@ namespace RFExplorerCommunicator
                                 }
                                 else if ((sNewLine.Length > 5) && ((sNewLine.Substring(0, 6) == "#C2-F:") || (sNewLine.Substring(0, 6) == "#C3-G:")))
                                 {
-                                    m_bThreadTrackingEnabled=false;
+                                    m_bThreadTrackingEnabled = false;
 
                                     if (m_bDebugTraces)
                                     {
@@ -1308,9 +1312,9 @@ namespace RFExplorerCommunicator
                                                             //If we need to restart, do it from first step
                                                             m_nRFGenTracking_CurrentSweepStep = 0;
 
-                                                            if ( (m_bTrackingNormalizing && (m_nTrackingNormalizingPass > m_nAutoStopSNATrackingCounter)) || 
+                                                            if ((m_bTrackingNormalizing && (m_nTrackingNormalizingPass > m_nAutoStopSNATrackingCounter)) ||
                                                                  !m_bTrackingAllowed ||
-                                                                 (!m_bTrackingNormalizing && ((m_nAutoStopSNATrackingCounter!=0) && (m_nTrackingPass > m_nAutoStopSNATrackingCounter)))
+                                                                 (!m_bTrackingNormalizing && ((m_nAutoStopSNATrackingCounter != 0) && (m_nTrackingPass > m_nAutoStopSNATrackingCounter)))
                                                                )
                                                             {
                                                                 //if normalizing is completed, or if we have finished tracking manually or automatically, we are done with RF power
@@ -1422,7 +1426,7 @@ namespace RFExplorerCommunicator
                             }
                         }
                     }
-                    if (m_eMode!=eMode.MODE_TRACKING)
+                    if (m_eMode != eMode.MODE_TRACKING)
                         Thread.Sleep(10);
                     else
                         Thread.Sleep(2); //in tracking mode we want to be as fast as possible
@@ -1575,11 +1579,11 @@ namespace RFExplorerCommunicator
                             if (m_bTrackingNormalizing)
                             {
                                 if (m_SweepTrackingNormalizedContainer == null)
-                                    m_SweepTrackingNormalizedContainer = new RFESweepDataCollection(3,true);
+                                    m_SweepTrackingNormalizedContainer = new RFESweepDataCollection(3, true);
 
-                                RFESweepData objSweep=(RFESweepData)objNew;
+                                RFESweepData objSweep = (RFESweepData)objNew;
                                 m_SweepTrackingNormalizedContainer.Add(objSweep);
-                                bool bWrongData=objSweep.GetAmplitudeDBM(objSweep.GetMinStep())<=MIN_AMPLITUDE_TRACKING_NORMALIZE;
+                                bool bWrongData = objSweep.GetAmplitudeDBM(objSweep.GetMinStep()) <= MIN_AMPLITUDE_TRACKING_NORMALIZE;
 
                                 if (bWrongData || ((m_nAutoStopSNATrackingCounter != 0) && (m_SweepTrackingNormalizedContainer.Count >= m_nAutoStopSNATrackingCounter)))
                                 {
@@ -1685,10 +1689,10 @@ namespace RFExplorerCommunicator
                             m_sSerialNumber = sLine.Substring(3, 16);
                             ReportLog("Device serial number: " + SerialNumber);
                         }
-                        else if((sLine.Length > 2) && (sLine.Substring(0, 2) == "$q"))
+                        else if ((sLine.Length > 2) && (sLine.Substring(0, 2) == "$q"))
                         {
                             //calibration data
-                            UInt16 nSize=Convert.ToUInt16(sLine[2]);
+                            UInt16 nSize = Convert.ToUInt16(sLine[2]);
 
                             if (IsGenerator())
                             {
@@ -1806,6 +1810,7 @@ namespace RFExplorerCommunicator
                             DrawRAWDecoder();
                         }
                     }
+
 #endif
                         else if ((sLine.Length > 5) && (sLine.Substring(0, 6) == "#C2-F:"))
                         {
@@ -1841,7 +1846,6 @@ namespace RFExplorerCommunicator
             return bDraw;
         }
 
-
         /// <summary>
         /// True if the connected object is a Signal Generator model
         /// </summary>
@@ -1857,10 +1861,11 @@ namespace RFExplorerCommunicator
         /// <returns></returns>
         public bool IsAnalyzer()
         {
-            return (!IsGenerator()) && (MainBoardModel!=eModel.MODEL_NONE);
+            return (!IsGenerator()) && (MainBoardModel != eModel.MODEL_NONE);
         }
 
         UInt16 m_nAutoStopSNATrackingCounter = 0;
+
         /// <summary>
         /// For SNA tracking mode, this setting will indicate how many tracking passes should be done before stop, or 0 for infinite
         /// </summary>
@@ -1869,7 +1874,6 @@ namespace RFExplorerCommunicator
             get { return m_nAutoStopSNATrackingCounter; }
             set { m_nAutoStopSNATrackingCounter = value; }
         }
-
 
         /// <summary>
         /// 
@@ -1883,6 +1887,7 @@ namespace RFExplorerCommunicator
 
             if (String.IsNullOrEmpty(sModel))
                 return false;
+
 
             //TODO: enable a smart comparison, only for actual model otherwise string is different due to client model, or (ACTIVE) string, etc
             /*if (sModel != m_objRFEGen.FullModelText)
@@ -1968,13 +1973,13 @@ namespace RFExplorerCommunicator
                 sValues = sValues.Replace("model:", "");
                 sValues = sValues.Replace("active range:", "");
                 sValues = sValues.Replace("mhz", "");
-                sValues = sValues.Replace("no expansion module found",eModel.MODEL_NONE.ToString().ToLower());
+                sValues = sValues.Replace("no expansion module found", eModel.MODEL_NONE.ToString().ToLower());
                 sValues = sValues.Replace(" ", "");
                 string[] arrValues = sValues.Split('@');
 
                 m_sRFExplorerFirmware = "";
                 m_eMainBoardModel = eModel.MODEL_NONE;
-                m_eExpansionBoardModel= eModel.MODEL_NONE;
+                m_eExpansionBoardModel = eModel.MODEL_NONE;
                 m_eActiveModel = eModel.MODEL_NONE;
                 m_bExpansionBoardActive = false;
                 if (arrValues.Length > 2)
@@ -2231,13 +2236,13 @@ namespace RFExplorerCommunicator
 
                 return UpdateOfflineConfigurationParameters_Generator(sConfigRFEGen, sModelRFEGen);
             }
-            else 
+            else
                 return false;
         }
 
         //This variable contains the latest correction file loaded
-        public RFEAmplitudeTableData m_AmplitudeCalibration=new RFEAmplitudeTableData();
-        /// <summary>
+        public RFEAmplitudeTableData m_AmplitudeCalibration = new RFEAmplitudeTableData();
+         /// <summary>
         /// Use this to load a correction file (will replace any prior file loaded)
         /// </summary>
         /// <param name="sFilename"></param>
@@ -2272,7 +2277,7 @@ namespace RFExplorerCommunicator
             if (IsGenerator())
                 return false; //only valid for analyzer
 
-            if (IsFileExtensionType(sFilename,_RFE_File_Extension))
+            if (IsFileExtensionType(sFilename, _RFE_File_Extension))
             {
                 //normal sweep data file
                 if (SweepData.LoadFile(sFilename, out sModel, out sConfiguration))
@@ -2306,7 +2311,7 @@ namespace RFExplorerCommunicator
                 else
                     return false;
             }
-            else if (IsFileExtensionType(sFilename,_SNANORM_File_Extension))
+            else if (IsFileExtensionType(sFilename, _SNANORM_File_Extension))
             {
                 if ((m_objRFEGen == null) || (!m_objRFEGen.PortConnected))
                     return false; //we can load and update connected generator only
@@ -2324,7 +2329,8 @@ namespace RFExplorerCommunicator
 
         #region Tracking Generator
         bool m_bTrackingNormalizing = false; //true if tracking and normalizing
-        UInt16 m_nTrackingNormalizingPass = 0; 
+        UInt16 m_nTrackingNormalizingPass = 0;
+
         /// <summary>
         /// number of normalization tracking pass completed
         /// </summary>
@@ -2373,7 +2379,7 @@ namespace RFExplorerCommunicator
         }
 
         //used to temporarily store the configuration of the analyzer before it goes to tracking mode
-        double  m_BackupStartMHZ, m_BackupStopMHZ, m_BackupTopDBM, m_BackupBottomDBM; 
+        double m_BackupStartMHZ, m_BackupStopMHZ, m_BackupTopDBM, m_BackupBottomDBM;
         /// <summary>
         /// Start and completes asynchronous tracking sequence, this action is performed on the Analyzer and will internally
         /// drive and handle the Generator.
@@ -2390,7 +2396,7 @@ namespace RFExplorerCommunicator
                 return false; //This can only be used in the analyzer
             }
 
-            if ((m_objRFEGen==null) || (!m_objRFEGen.PortConnected))
+            if ((m_objRFEGen == null) || (!m_objRFEGen.PortConnected))
             {
                 //Signal Generator not connected or available
                 ReportLog("RF Explorer Signal Generator not connected");
@@ -2415,7 +2421,7 @@ namespace RFExplorerCommunicator
             //start actual tracking
             m_bTrackingAllowed = true; //tell thread we allow tracking being enabled
             m_nRFGenTracking_CurrentSweepStep = 0;
-            
+
             m_objRFEGen.SendCommand_GeneratorCW();
             m_objRFEGen.RFGenPowerON = true;
             SendCommand("C3-K:" + ((UInt32)(m_objRFEGen.RFGenStartFrequencyMHZ * 1000)).ToString("D7") + "," + ((UInt32)(m_objRFEGen.RFGenStepFrequencyMHZ * 1000)).ToString("D7"));
@@ -2464,7 +2470,7 @@ namespace RFExplorerCommunicator
                 //wait till tracking sweep is done before changing unit to spectrum analyzer mode
                 Thread.Sleep(100);
                 nWaitInd++;
-                if (nWaitInd>100)
+                if (nWaitInd > 100)
                 {
                     //too much to keep waiting
                     m_bThreadTrackingEnabled = false; //force end of tracking
@@ -2529,7 +2535,7 @@ namespace RFExplorerCommunicator
 
                 HoldMode = false;
 
-                OnPortConnected(new EventArgs()); 
+                OnPortConnected(new EventArgs());
                 ReportLog("Connected: " + m_serialPortObj.PortName.ToString() + ", " + m_serialPortObj.BaudRate.ToString() + " bauds");
 
 #if SUPPORT_EXPERIMENTAL
@@ -2666,13 +2672,20 @@ namespace RFExplorerCommunicator
         {
             m_arrValidCP2101Ports = null;
 
-            string csSubkey = "SYSTEM\\CurrentControlSet\\Enum\\USB\\VID_10C4&PID_EA60";
+            // string csSubkey = "SYSTEM\\CurrentControlSet\\Enum\\USB\\VID_10C4&PID_EA60";
+            //ftdi key
+            //string csSubkey = "SYSTEM\\CurrentControlSet\\Enum\\USB\\VID_0403&PID_6001";
+            string csSubkey = "SYSTEM\\CurrentControlSet\\Enum\\FTDIBUS";
             RegistryKey regUSBKey = Registry.LocalMachine.OpenSubKey(csSubkey, RegistryKeyPermissionCheck.ReadSubTree, System.Security.AccessControl.RegistryRights.QueryValues | System.Security.AccessControl.RegistryRights.EnumerateSubKeys);
 
             if (regUSBKey == null)
             {
                 ReportLog("Found no CP210x registry entries");
                 return;
+            }
+            else
+            {
+                ReportLog("Found some FTDI dev");
             }
 
             string[] arrDeviceCP210x = regUSBKey.GetSubKeyNames();
@@ -2683,33 +2696,44 @@ namespace RFExplorerCommunicator
             {
                 try
                 {
+                    //RegistryKey regUSBID = regUSBKey.OpenSubKey(sUSBIndex, RegistryKeyPermissionCheck.ReadSubTree, System.Security.AccessControl.RegistryRights.QueryValues | System.Security.AccessControl.RegistryRights.EnumerateSubKeys);
+                    //get first key for ftdi
                     RegistryKey regUSBID = regUSBKey.OpenSubKey(sUSBIndex, RegistryKeyPermissionCheck.ReadSubTree, System.Security.AccessControl.RegistryRights.QueryValues | System.Security.AccessControl.RegistryRights.EnumerateSubKeys);
-                    if (regUSBID != null)
+
+                    foreach (string sUSBSubIndex in regUSBID.GetSubKeyNames())
                     {
-                        Object obFriendlyName = regUSBID.GetValue("FriendlyName");
-                        if (obFriendlyName != null)
+                        regUSBID = regUSBID.OpenSubKey(sUSBSubIndex, RegistryKeyPermissionCheck.ReadSubTree, System.Security.AccessControl.RegistryRights.QueryValues | System.Security.AccessControl.RegistryRights.EnumerateSubKeys);
+
+
+                        //   regUSBID = regUSBKey.OpenSubKey("0000", RegistryKeyPermissionCheck.ReadSubTree, System.Security.AccessControl.RegistryRights.QueryValues | System.Security.AccessControl.RegistryRights.EnumerateSubKeys);
+                        if (regUSBID != null)
                         {
-                            if (m_bShowDetailedCOMPortInfo)
-                                ReportLog("   FriendlyName: " + obFriendlyName.ToString());
-                            RegistryKey regDevice = regUSBID.OpenSubKey("Device Parameters", RegistryKeyPermissionCheck.ReadSubTree, System.Security.AccessControl.RegistryRights.QueryValues);
-                            if (regDevice != null)
+                            Object obFriendlyName = regUSBID.GetValue("FriendlyName");
+
+                            if (obFriendlyName != null)
                             {
-                                object obPortName = regDevice.GetValue("PortName");
-                                string sPortName = obPortName.ToString();
                                 if (m_bShowDetailedCOMPortInfo)
-                                    ReportLog("   PortName: " + sPortName);
-                                if (IsConnectedPort(sPortName) && !IsRepeatedPort(sPortName))
+                                    ReportLog("   FriendlyName: " + obFriendlyName.ToString());
+                                RegistryKey regDevice = regUSBID.OpenSubKey("Device Parameters", RegistryKeyPermissionCheck.ReadSubTree, System.Security.AccessControl.RegistryRights.QueryValues);
+                                if (regDevice != null)
                                 {
+                                    object obPortName = regDevice.GetValue("PortName");
+                                    string sPortName = obPortName.ToString();
                                     if (m_bShowDetailedCOMPortInfo)
-                                        ReportLog(sPortName + " is a valid available port.");
-                                    if (m_arrValidCP2101Ports == null)
+                                        ReportLog("   PortName: " + sPortName);
+                                    if (IsConnectedPort(sPortName) && !IsRepeatedPort(sPortName))
                                     {
-                                        m_arrValidCP2101Ports = new string[] { sPortName };
-                                    }
-                                    else
-                                    {
-                                        Array.Resize(ref m_arrValidCP2101Ports, m_arrValidCP2101Ports.Length + 1);
-                                        m_arrValidCP2101Ports[m_arrValidCP2101Ports.Length - 1] = sPortName;
+                                        if (m_bShowDetailedCOMPortInfo)
+                                            ReportLog(sPortName + " is a valid available port.");
+                                        if (m_arrValidCP2101Ports == null)
+                                        {
+                                            m_arrValidCP2101Ports = new string[] { sPortName };
+                                        }
+                                        else
+                                        {
+                                            Array.Resize(ref m_arrValidCP2101Ports, m_arrValidCP2101Ports.Length + 1);
+                                            m_arrValidCP2101Ports[m_arrValidCP2101Ports.Length - 1] = sPortName;
+                                        }
                                     }
                                 }
                             }
@@ -2818,6 +2842,7 @@ namespace RFExplorerCommunicator
 
         private RFESweepDataCollection m_SweepTrackingNormalizedContainer;
         private RFESweepData m_SweepTrackingNormalized;
+
         /// <summary>
         /// Sweep data with values of last normalized tracking scan, valid for current configuration
         /// </summary>

@@ -90,7 +90,7 @@
             this.m_ComboBaudRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_ComboBaudRate.Items.AddRange(new object[] {
             "2400",
-            "500000"});
+            "115200"});
             this.m_ComboBaudRate.Location = new System.Drawing.Point(103, 5);
             this.m_ComboBaudRate.Name = "m_ComboBaudRate";
             this.m_ComboBaudRate.Size = new System.Drawing.Size(83, 21);
