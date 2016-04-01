@@ -13,5 +13,7 @@ Ive made some very modest changes to make this great software work with an ardui
 
 see: https://github.com/VincentGijsen/RFExplorerArduino
 
+for some background info, check http://www.vincentgijsen.nl/doing-some-rf-spectrum-analyser-stuff/
+
 
 don't expect acurate results, when using this modified version, with the arduino code, somewhere within my github account,  BUY THE REAL STUFF
