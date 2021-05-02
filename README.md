@@ -1,5 +1,6 @@
 # RF Explorer Spectrum Analyzers
 
+<<<<<<< HEAD
 RF Explorer open source software repository. For more details visit http://j3.rf-explorer.com/40-rfe/article/57-hackers-corner
 
 ### Background
@@ -17,3 +18,6 @@ for some background info, check http://www.vincentgijsen.nl/doing-some-rf-spectr
 
 
 don't expect acurate results, when using this modified version, with the arduino code, somewhere within my github account,  BUY THE REAL STUFF
+=======
+Obsolete - please use https://github.com/RFExplorer/RFExplorer-for-Windows for latest development
+>>>>>>> 325612c82eb44f528297c42fa2c1749d7a1cf375
