@@ -788,7 +788,8 @@ namespace SharpGL
         public const int WM_SYNCPAINT = 0x0088;
         public const int WM_SYSCHAR = 0x0106;
         public const int WM_SYSCOLORCHANGE = 0x0015;
-        public const int WM_SYSCOMMAND = 0x0112;
+        public const int WM_SYSCOMMAND = 0x0
+            ;
         public const int WM_SYSDEADCHAR = 0x0107;
         public const int WM_SYSKEYDOWN = 0x0104;
         public const int WM_SYSKEYUP = 0x0105;

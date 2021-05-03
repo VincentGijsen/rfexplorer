@@ -315,7 +315,7 @@ namespace RFExplorerCommunicator
                 return 0.0f;
         }
 
-            bool bAnyValue = false;
+        /*    bool bAnyValue = false;
             foreach (float fVal in m_arrSpectrumAnalyzerEmbeddedCalibrationOffsetDB)
             {
                 if (Math.Abs(fVal - 0.0) > 0.001f)
@@ -325,7 +325,7 @@ namespace RFExplorerCommunicator
                 }
             }
             return bAnyValue;
-        }
+        }*/
 
         //actual -30dBm adjusted values read from signal generator
         double[] m_arrSignalGeneratorEmbeddedCalibrationActual30DBM = null;
@@ -1553,13 +1553,14 @@ namespace RFExplorerCommunicator
                                                         m_arrReceivedData.Enqueue(objSweep.Dump());
                                                         Monitor.Exit(m_arrReceivedData);
                                                     }
+
                                                     if (nSweepSteps > 5) //check this is not an incomplete scan (perhaps from a stopped SNA tracking step)
                                                     {
-                                                    //Normal spectrum analyzer sweep data
-                                                    Monitor.Enter(m_arrReceivedData);
-                                                    m_arrReceivedData.Enqueue(objSweep);
-                                                    Monitor.Exit(m_arrReceivedData);
-                                                }
+                                                        //Normal spectrum analyzer sweep data
+                                                        Monitor.Enter(m_arrReceivedData);
+                                                        m_arrReceivedData.Enqueue(objSweep);
+                                                        Monitor.Exit(m_arrReceivedData);
+                                                    }
                                                 }
                                                 else
                                                 {
@@ -1603,11 +1604,11 @@ namespace RFExplorerCommunicator
                                                         {
                                                             if (m_bTrackingAllowed)
                                                             {
-                                                            m_objRFEGen.SendCommand_TrackingStep(m_nRFGenTracking_CurrentSweepStep);
-                                                            SendCommand_TrackingStep(m_nRFGenTracking_CurrentSweepStep);
-                                                        }
-                                                        else
-                                                        {
+                                                                m_objRFEGen.SendCommand_TrackingStep(m_nRFGenTracking_CurrentSweepStep);
+                                                                SendCommand_TrackingStep(m_nRFGenTracking_CurrentSweepStep);
+                                                            }
+                                                            else
+                                                            {
                                                                 //we manually stopped tracking before a full capture completed, so stop right now
                                                                 m_objRFEGen.SendCommand_GeneratorRFPowerOFF();
                                                                 m_bThreadTrackingEnabled = false; //be done with thread tracking activity, so main thread knows
@@ -1661,7 +1662,7 @@ namespace RFExplorerCommunicator
                                                 Monitor.Enter(m_arrReceivedData);
                                                 m_arrReceivedData.Enqueue("Configuration not available yet. $S string ignored.");
                                                 Monitor.Exit(m_arrReceivedData);
-                                    }
+                                            }
                                         }
                                     }
                                     else
@@ -1695,9 +1696,9 @@ namespace RFExplorerCommunicator
                                     m_arrReceivedData.Enqueue("$R" + strReceived.Substring(4, nSize));
                                         Monitor.Exit(m_arrReceivedData);
                                     strReceived = strReceived.Substring(nSize + 6);
-                                    }
                                 }
                             }
+                        }
                         else
                         {
                             int nEndPos = strReceived.IndexOf("\r\n");
@@ -1723,7 +1724,7 @@ namespace RFExplorerCommunicator
                         }
                     }
                     if (m_eMode != eMode.MODE_TRACKING)
-                        Thread.Sleep(10);
+                        Thread.Sleep(2);
                     else
                         Thread.Sleep(2); //in tracking mode we want to be as fast as possible
                 }
